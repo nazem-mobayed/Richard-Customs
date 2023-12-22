@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    <title>Happy New Year 2024</title>
+ 
+<link rel="stylesheet" href="style.css">
+       <script src="https://kit.fontawesome.com/d31dcbe67f.js" crossorigin="anonymous"></script>
+       <meta name="description" content="Happy New Year 2024 (Richard customs), web page created by : Nazem Mobayed">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    </head>
+  
+              <body>
+    <div>
+        <canvas id="snowy">
+            
+        </canvas>
+        <script>
+            const c = document.getElementById("snowy")
+            const draw = c.getContext("2d")
+            function percent(x,y) {
+                switch(y) {
+                    case 0:
+                    return x*c.width/100
+                    break;
+                    case 1:
+                    return x*c.height/100
+                    break;
+                }
+            }
+            draw.beginPath()
+            draw.fillStyle = "black"
+                     draw.fillRect(0,0,percent(100,0),percent(100,1))
+            for(var i=0;i<=150;++i) {
+                x = Math.random()*(percent(100,0)-1)
+                y  = Math.random()*(percent(90,1)-1)
+                size = Math.random()*0.5
+                draw.beginPath()
+                draw.fillStyle = "white"
+                draw.arc(x,y,size,0,2*Math.PI)
+                draw.fill()
+            }
+        </script>
+        </div>
+        <div class="content">
+    <div align="center" id="logo">
+    <img src="logo.jpeg">
+    <br>
+            <font>
+                2024 <br>
+                Happy New Year
+            </font>
+</div>
+    <div align="center">
+    <br><br><br>
+            <a href="https://t.me/Richard_Customs_Club" class="telegram">
+            <span class="fab fa-telegram" aria-hidden="true"></span>&nbsp; Richard_Customs_Club
+            </a><br>
+            <a href="https://www.instagram.com/richardalbakri?igshid=YTQwZjQ0NmI0OA==" class="instagram">
+            <span class="fab fa-instagram" aria-hidden="true"></span>&nbsp; Richard_Customs
+            </a>
+</div>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+body{
+    font-family:Arial;
+}
+::selection {
+    background-color:gray;
+}
+canvas{
+    border:1px solid black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:110%;
+    z-index:-1;
+}
+.content{
+    color:white;
+    width:100%;
+    padding-top:40px;
+    font-weight:bolder;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.fa.fa-snowflake {
+    font-size:1000%;
+    position:relative;
+    top:-20px;
+}
+.fab.fa-telegram, .fab.fa-instagram{
+    font-size: 150%;
+}
+.content font {
+    text-shadow:1px 1px 10px skyblue;
+    font-size:250%;
+}
+a {
+    text-decoration:none;
+    color:white;
+    font-weight:bolder;
+    font-size:120%;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+a.telegram {
+    background: rgb(6,251,238);
+    background: linear-gradient(45deg, rgba(6,251,238,1) 14%, rgba(69,249,186,1) 69%);
+    position:relative;
+}
+a.instagram {
+position:relative;
+top:+25px;
+    background: rgb(206,19,214);
+background: linear-gradient(-45deg, rgba(206,19,214,1) 53%, rgba(254,21,202,1) 79%);
+}
+a.instagram:hover {
+    box-shadow:0px 0px 10px rgb(198,0,294);
+    transition:border-radius 0.8s;
+    border-radius: 35px;
+}
+a.telegram:hover {
+    box-shadow:0px 0px 10px skyblue;
+    transition:border-radius 0.8s;
+    border-radius: 35px;
+    z-index:1;
+}
+img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px gray;
+}
+@media screen and (min-width:650px) {
+    .content {
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    a.instagram, a.telegram {
+        display:inline-block;
+        width:90%;
+    }
+    div#logo {
+        width:35%;
+    }
+    .content div {
+        width: 55%;
+    }
+}
